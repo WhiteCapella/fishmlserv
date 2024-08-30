@@ -1,10 +1,10 @@
-# fly.toml app configuration file generated for fishmlserv-whitecapella on 2024-08-30T10:53:41+09:00
+# fly.toml app configuration file generated for fishmlserv-lingering-dawn-2496 on 2024-08-30T14:28:33+09:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'fishmlserv-whitecapella'
-primary_region = 'sin'
+app = 'fishmlserv-lingering-dawn-2496'
+primary_region = 'nrt'
 
 [build]
 
