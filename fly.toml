@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for fishmlserv-lingering-dawn-2496 on 2024-08-30T14:28:33+09:00
+# fly.toml app configuration file generated for mlp030-practice on 2024-08-30T16:10:12+09:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'fishmlserv-lingering-dawn-2496'
+app = 'mlp030-practice'
 primary_region = 'nrt'
 
 [build]
@@ -17,6 +17,6 @@ primary_region = 'nrt'
   processes = ['app']
 
 [[vm]]
-  memory = '1gb'
+  memory = '2gb'
   cpu_kind = 'shared'
   cpus = 1
