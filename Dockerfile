@@ -8,9 +8,10 @@ WORKDIR /code
 # 
 #COPY . /code/
 COPY src/fishmlserv/main.py /code/
+COPY requirements.txt /code/
 
 # 
-RUN pip install -r /code/requirements.txt
+RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 #RUN pip install git+https://<MY_PIP_GITHUB_URL>
 
 # 
