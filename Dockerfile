@@ -12,7 +12,7 @@ COPY src/fishmlserv/main.py /code/
 
 # 
 #RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
-RUN pip install git+https://github.com/WhiteCapella/fishmlserv.git@0.4/deploy
+RUN pip install --no-cache-dir --upgrade git+https://github.com/WhiteCapella/fishmlserv.git@0.4/deploy
 
 # 
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
