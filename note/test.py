@@ -44,8 +44,6 @@ import pickle
 with open("model.pkl", "wb") as f:
     pickle.dump(kn, f)
 
-### 모델 불러오기
-with open("model.pkl", "rb") as f:
-    fish_model = pickle.load(f)
+
 
 fish_model.predict([[30.1, 600.123]])
