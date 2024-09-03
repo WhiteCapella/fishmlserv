@@ -23,3 +23,8 @@ distribution = false
 note = [
     "notebook>=7.2.2",
 ]
+[project.scripts]
+ppping = 'fishmlserv.app:ppping'
+get-model-path = 'fishmlserv.app:model_path'
+pp = 'fishmlserv.app:pp'
+ppp = 'fishmlserv.app:ppp'
