@@ -1,6 +1,6 @@
 [project]
 name = "fishmlserv"
-version = "0.5.1"
+version = "0.5.2"
 description = "Default template for PDM package"
 authors = [
     {name = "WhiteCapella", email = "elnath1002@naver.com"},
@@ -10,6 +10,8 @@ dependencies = [
     "uvicorn[standard]>=0.30.6",
     "scikit-learn>=1.5.1",
     "matplotlib>=3.9.2",
+    "fire>=0.6.0",
+    "typer>=0.12.5",
 ]
 requires-python = "==3.11.*"
 readme = "README.md"
