@@ -1,5 +1,6 @@
 from typing import Union
 from fastapi import FastAPI
+import os
 import pickle
 
 app = FastAPI()
@@ -35,9 +36,42 @@ def fish(length: float, weight:float):
     #   fish_class = "도미"
     #else:
     #   fish_class = "빙어"
+
     return {
                 "prediction": fish_class,
                 "length": length, 
                 "weight": weight
             }
+
+@app.get("/prediction")
+def pre(length: float, weight:float):
+    """
+    물고기 예측기
+
+    Args:
+        length (float): 물고기 길이(cm)
+        weight (float): 물고기 무게(g)
+
+    Returns:
+        dict: 물고기 종류를 담은 딕셔너리
+    """
+
+    fish_class = "모름"
+    path = os.getcwd()
+    path = path + "/model.pkl"
+    with open(path, "rb") as f:
+        fish_model = pickle.load(f)
+
+    prediction = fish_model.predict([[length, weight]])
+    if prediction[0] == 1:
+        fish_class = "do-mi"
+    else:
+        fish_class = "bing-er"
+
+    return {
+                "prediction": fish_class,
+                "length": length,
+                "weight": weight
+            }
+
 
