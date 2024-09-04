@@ -8,6 +8,7 @@ WORKDIR /code
 # 
 #COPY . /code/
 COPY src/fishmlserv/main.py /code/
+COPY src/fishmlserv/model.pkl /code/
 #COPY requirements.txt /code/
 
 # 
