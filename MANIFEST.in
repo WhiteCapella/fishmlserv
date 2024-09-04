@@ -1,1 +1,1 @@
-recursive-include examples model/*.pkl
+recursive-include examples src *.pkl
